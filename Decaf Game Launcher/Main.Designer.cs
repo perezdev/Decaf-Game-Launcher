@@ -397,7 +397,6 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox7.Controls.Add(this.chkDecafOptions_LogAsync);
             this.groupBox7.Controls.Add(this.chkDecafOptions_LogToFile);
             this.groupBox7.Controls.Add(this.chkDecafOptions_LogToStdOut);
@@ -406,9 +405,9 @@
             this.groupBox7.Controls.Add(this.chkDecafOptions_LogBranchTrace);
             this.groupBox7.Controls.Add(this.cbxDecafOptions_LogLevel);
             this.groupBox7.Controls.Add(this.label9);
-            this.groupBox7.Location = new System.Drawing.Point(3151, 30);
+            this.groupBox7.Location = new System.Drawing.Point(448, 30);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(397, 143);
+            this.groupBox7.Size = new System.Drawing.Size(403, 241);
             this.groupBox7.TabIndex = 11;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Log";
@@ -506,12 +505,10 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox6.Controls.Add(this.chkDecafOptions_SoundDumpSounds);
             this.groupBox6.Location = new System.Drawing.Point(3, 177);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(3141, 45);
+            this.groupBox6.Size = new System.Drawing.Size(439, 45);
             this.groupBox6.TabIndex = 10;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Dump Sounds";
@@ -528,13 +525,11 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.Controls.Add(this.chkDecafOptions_GX2DumpTextures);
             this.groupBox5.Controls.Add(this.chkDecafOptions_GX2DumpShaders);
             this.groupBox5.Location = new System.Drawing.Point(3, 226);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(3141, 45);
+            this.groupBox5.Size = new System.Drawing.Size(439, 45);
             this.groupBox5.TabIndex = 9;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "GX2";
@@ -561,14 +556,12 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.chkDecafOptions_GpuDebug);
             this.groupBox4.Controls.Add(this.chkDecafOptions_GpuForceSync);
             this.groupBox4.Controls.Add(this.lblDecafOptions_GpuDebugFilters);
             this.groupBox4.Location = new System.Drawing.Point(3, 128);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(3141, 45);
+            this.groupBox4.Size = new System.Drawing.Size(439, 45);
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "GPU";
@@ -607,13 +600,11 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.chkDecafOptions_JitEnabled);
             this.groupBox3.Controls.Add(this.chkDecafOptions_JitVerify);
             this.groupBox3.Location = new System.Drawing.Point(3, 79);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(3141, 45);
+            this.groupBox3.Size = new System.Drawing.Size(439, 45);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "JIT";
@@ -640,13 +631,11 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.chkDecafOptions_DebuggerEnabled);
             this.groupBox2.Controls.Add(this.chkDecafOptions_DebuggerBreakOnEntry);
             this.groupBox2.Location = new System.Drawing.Point(3, 30);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(3141, 45);
+            this.groupBox2.Size = new System.Drawing.Size(439, 45);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Debugger";
