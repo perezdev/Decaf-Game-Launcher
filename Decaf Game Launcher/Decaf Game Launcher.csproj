@@ -204,10 +204,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Gamepad.ico" />
-    <None Include="Resources\keyring.png" />
     <None Include="Resources\controller.wiiugamepad.png" />
     <None Include="Resources\controller.wiiupro.png" />
-    <None Include="Resources\wiiu_blank_box_art.jpg" />
     <None Include="Resources\debug.icon.png" />
     <None Include="Resources\search.gray.png" />
     <None Include="Resources\gridview.default.gray.png" />

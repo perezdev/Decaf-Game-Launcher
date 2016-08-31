@@ -163,16 +163,6 @@ namespace Decaf_Game_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap keyring {
-            get {
-                object obj = ResourceManager.GetObject("keyring", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap options {
             get {
                 object obj = ResourceManager.GetObject("options", resourceCulture);
@@ -196,16 +186,6 @@ namespace Decaf_Game_Launcher.Properties {
         internal static System.Drawing.Bitmap snes_controller {
             get {
                 object obj = ResourceManager.GetObject("snes_controller", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap wiiu_blank_box_art {
-            get {
-                object obj = ResourceManager.GetObject("wiiu_blank_box_art", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

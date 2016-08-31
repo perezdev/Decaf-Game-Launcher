@@ -151,16 +151,10 @@
   <data name="debug_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\debug.icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wiiu_blank_box_art" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wiiu_blank_box_art.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="controller_wiiupro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\controller.wiiupro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="controller_wiiugamepad" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\controller.wiiugamepad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="keyring" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\keyring.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
