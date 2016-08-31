@@ -5,6 +5,11 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decaf Game Launcher", "Decaf Game Launcher\Decaf Game Launcher.csproj", "{C7D060AA-F034-4345-80AC-5238FA54C71A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{5BB7D665-6A57-4307-AE13-F9DEA2E4C634}"
+	ProjectSection(SolutionItems) = preProject
+		Libraries\TargaImage.dll = Libraries\TargaImage.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

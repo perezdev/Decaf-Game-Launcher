@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Decaf_Game_Launcher</RootNamespace>
     <AssemblyName>Decaf Game Launcher</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -22,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +33,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Gamepad.ico</ApplicationIcon>
@@ -38,6 +41,10 @@
   <ItemGroup>
     <Reference Include="HtmlAgilityPack, Version=1.4.9.5, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
       <HintPath>..\packages\HtmlAgilityPack.1.4.9.5\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -51,13 +58,58 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="TargaImage">
+      <HintPath>..\Libraries\TargaImage.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\Games\GameView.cs">
+    <Compile Include="Controls\Controllers\WiiUGamePadOptions.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\Games\GameView.Designer.cs">
-      <DependentUpon>GameView.cs</DependentUpon>
+    <Compile Include="Controls\Controllers\WiiUGamePadOptions.Designer.cs">
+      <DependentUpon>WiiUGamePadOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Controllers\WiiUProOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Controllers\WiiUProOptions.Designer.cs">
+      <DependentUpon>WiiUProOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Games\CompactGameView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Games\CompactGameView.Designer.cs">
+      <DependentUpon>CompactGameView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Games\GamesQuickMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Games\GamesQuickMenu.Designer.cs">
+      <DependentUpon>GamesQuickMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Games\DefaultGameView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Games\DefaultGameView.Designer.cs">
+      <DependentUpon>DefaultGameView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Games\SearchTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Games\SearchTextBox.Designer.cs">
+      <DependentUpon>SearchTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Games\TranslucentLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Games\TranslucentLabel.Designer.cs">
+      <DependentUpon>TranslucentLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Games\TranslucentPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Games\TranslucentPanel.Designer.cs">
+      <DependentUpon>TranslucentPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\Menu\MenuPages.cs">
       <SubType>Component</SubType>
@@ -73,6 +125,7 @@
     </Compile>
     <Compile Include="Decaf\DecafEmulator.cs" />
     <Compile Include="Games\Game.cs" />
+    <Compile Include="Games\GameDirectoryInfo.cs" />
     <Compile Include="Games\GamesList.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -82,10 +135,39 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\DecafConfig\Config.cs" />
+    <Compile Include="Settings\DecafConfig\Debugger.cs" />
+    <Compile Include="Settings\DecafConfig\Device.cs" />
+    <Compile Include="Settings\DecafConfig\DeviceType.cs" />
+    <Compile Include="Settings\DecafConfig\Gpu.cs" />
+    <Compile Include="Settings\DecafConfig\Gx2.cs" />
+    <Compile Include="Settings\DecafConfig\Input.cs" />
+    <Compile Include="Settings\DecafConfig\Jit.cs" />
+    <Compile Include="Settings\DecafConfig\JoystickDevice.cs" />
+    <Compile Include="Settings\DecafConfig\KeyboardDevice.cs" />
+    <Compile Include="Settings\DecafConfig\Log.cs" />
+    <Compile Include="Settings\DecafConfig\SdlKey.cs" />
+    <Compile Include="Settings\DecafConfig\Sound.cs" />
+    <Compile Include="Settings\DecafConfig\System.cs" />
+    <Compile Include="Settings\DecafConfig\Vpad0.cs" />
+    <Compile Include="Settings\GameRootDirectory.cs" />
+    <Compile Include="Settings\GameView.cs" />
     <Compile Include="Settings\LauncherSettings.cs" />
     <Compile Include="ThreadSafeExtensions.cs" />
-    <EmbeddedResource Include="Controls\Games\GameView.resx">
-      <DependentUpon>GameView.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\Controllers\WiiUGamePadOptions.resx">
+      <DependentUpon>WiiUGamePadOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Controllers\WiiUProOptions.resx">
+      <DependentUpon>WiiUProOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Games\CompactGameView.resx">
+      <DependentUpon>CompactGameView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Games\DefaultGameView.resx">
+      <DependentUpon>DefaultGameView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Games\GamesQuickMenu.resx">
+      <DependentUpon>GamesQuickMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -122,6 +204,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Gamepad.ico" />
+    <None Include="Resources\keyring.png" />
+    <None Include="Resources\controller.wiiugamepad.png" />
+    <None Include="Resources\controller.wiiupro.png" />
+    <None Include="Resources\wiiu_blank_box_art.jpg" />
+    <None Include="Resources\debug.icon.png" />
+    <None Include="Resources\search.gray.png" />
+    <None Include="Resources\gridview.default.gray.png" />
+    <None Include="Resources\gridview.default.blue.png" />
+    <None Include="Resources\gridview.compact.gray.png" />
+    <None Include="Resources\gridview.compact.blue.png" />
+    <None Include="Resources\help.png" />
     <None Include="Resources\games.png" />
     <None Include="Resources\snes_controller.png" />
   </ItemGroup>
