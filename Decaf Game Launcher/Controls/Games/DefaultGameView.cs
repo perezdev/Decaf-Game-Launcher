@@ -23,8 +23,11 @@ namespace Decaf_Game_Launcher.Controls.Games
 
             picBoxArt.Image = Game.BoxArtImage == null ? Game.BannerImage : Game.BoxArtImage;
 
-            ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(picBoxArt, game.Name);
+            panel1.Parent = picBoxArt;
+            label1.Text = game.Name;
+
+            //ToolTip toolTip = new ToolTip();
+            //toolTip.SetToolTip(picBoxArt, game.Name);
         }
 
         private void picBoxArt_MouseClick(object sender, MouseEventArgs e)
@@ -58,6 +61,18 @@ namespace Decaf_Game_Launcher.Controls.Games
                     Process.Start(Game.GameDirectory.FullName);
                 }
             }
+        }
+
+        private void picBoxArt_MouseEnter(object sender, EventArgs e)
+        {
+            panel1.Visible = true;
+            label1.Visible = true;
+        }
+
+        private void picBoxArt_MouseLeave(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+            label1.Visible = false;
         }
     }
 }

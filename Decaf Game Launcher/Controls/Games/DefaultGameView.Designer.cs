@@ -33,9 +33,11 @@
             this.cmsGame = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiOpenBoxArt = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiOpenInFileSystem = new System.Windows.Forms.ToolStripMenuItem();
-            this.translucentPanel1 = new Decaf_Game_Launcher.Controls.Games.TranslucentPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxArt)).BeginInit();
             this.cmsGame.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // picBoxArt
@@ -51,6 +53,8 @@
             this.picBoxArt.TabStop = false;
             this.picBoxArt.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picBoxArt_MouseClick);
             this.picBoxArt.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.picBoxArt_MouseDoubleClick);
+            this.picBoxArt.MouseEnter += new System.EventHandler(this.picBoxArt_MouseEnter);
+            this.picBoxArt.MouseLeave += new System.EventHandler(this.picBoxArt_MouseLeave);
             // 
             // cmsGame
             // 
@@ -74,26 +78,42 @@
             this.tsmiOpenInFileSystem.Text = "Open in file system";
             this.tsmiOpenInFileSystem.Click += new System.EventHandler(this.ToolStripMenuItems_Click);
             // 
-            // translucentPanel1
+            // panel1
             // 
-            this.translucentPanel1.BackColor = System.Drawing.Color.Black;
-            this.translucentPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.translucentPanel1.Location = new System.Drawing.Point(0, 324);
-            this.translucentPanel1.Name = "translucentPanel1";
-            this.translucentPanel1.Size = new System.Drawing.Size(250, 28);
-            this.translucentPanel1.TabIndex = 1;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 324);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(250, 28);
+            this.panel1.TabIndex = 1;
+            this.panel1.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(250, 28);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Visible = false;
             // 
             // DefaultGameView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.translucentPanel1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.picBoxArt);
             this.Name = "DefaultGameView";
             this.Size = new System.Drawing.Size(250, 352);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxArt)).EndInit();
             this.cmsGame.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -101,9 +121,10 @@
         #endregion
 
         private System.Windows.Forms.PictureBox picBoxArt;
-        private TranslucentPanel translucentPanel1;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ContextMenuStrip cmsGame;
         private System.Windows.Forms.ToolStripMenuItem tsmiOpenBoxArt;
         private System.Windows.Forms.ToolStripMenuItem tsmiOpenInFileSystem;
+        private System.Windows.Forms.Label label1;
     }
 }
